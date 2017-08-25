@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pizza</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<script type="text/javascript" src="js/businessScripts.js"></script>
+	<script type="text/javascript" src="js/uiScripts.js"></script>
+</head>
+<body>
+	<div class="jumbotron">
+	</div>
+	<div class="container-fluid">
+		<ol class="breadcrumb">
+			<li><a href=""><span class="glyphicon">&#xe021;</span></a></li>
+			<li class="active">Pizza Type</li>
+	 		<li><a href="#bread-type">Bread Type</a></li>
+			<li><a href="#topping">Toppings</a></li>
+			<li><a href="#address">Address</a></li>
+			<li><a href="#order">Place Order</a></li> 
+		</ol>
+	</div>
+	<div class="container">
+		<div class="row" id="home">
+			<div class="col-sm-12">
+				<div class="home">
+					<p>Your favorite pizza is just 5 steps away</p>
+					<button class="goToStep1">Lets Order!</button>
+				</div>
+			</div>
+		</div>
+		<div class="row" id="pizza-type">
+			<div class="col-sm-3">
+				<div class="img-wrapper">
+					<img src="img/personalPizza.jpg" class="img-thumbnail">
+				</div>
+			</div>
+			<div class="col-sm-3">
+				<div class="img-wrapper">
+					<img src="img/regularPizza.jpg" class="img-thumbnail">
+				</div>
+			</div>
+			<div class="col-sm-3">
+				<div class="img-wrapper">
+					<img src="img/largePizza.jpg" class="img-thumbnail">
+				</div>
+			</div>
+			<div class="col-sm-3">
+				<div class="img-wrapper">
+					<img src="img/xtraLargePizza.jpg" class="img-thumbnail">
+				</div>
+			</div>
+		</div>
+		<div class="row" id="bread-type">
+			<div class="col-sm-3">
+				<div class="img-wrapper">
+					<img src="img/classicBread.jpg" class="img-thumbnail">
+				</div>
+			</div>
+			<div class="col-sm-3">
+				<div class="img-wrapper">
+					<img src="img/crunchyBread.jpg" class="img-thumbnail">
+				</div>
+			</div>
+			<div class="col-sm-3">
+				<div class="img-wrapper">
+					<img src="img/crustBread.jpg" class="img-thumbnail">
+				</div>
+			</div>
+			<div class="col-sm-3">
+				<div class="img-wrapper">
+					<img src="img/cheeseBread.jpg" class="img-thumbnail">
+				</div>
+			</div>
+		</div>
+		<div class="row" id="Toppings">
+			<div class="col-sm-3">
+				<div class="topping">
+					<p><i></i>Cheese</p>
+				</div>
+			</div>
+			<div class="col-sm-3">
+				<div class="topping">
+					<p><i></i>Pepperoni</p>
+				</div>
+			</div>
+			<div class="col-sm-3">
+				<div class="topping">
+					<p><i></i>Artichoke</p>
+				</div>
+			</div>
+			<div class="col-sm-3">
+				<div class="topping">
+					<p><i></i>Anchovy</p>
+				</div>
+			</div>
+			<div class="col-sm-3">
+				<div class="topping">
+					<p><i></i>Tomato</p>
+				</div>
+			</div>
+			<div class="col-sm-3">
+				<div class="topping">
+					<p><i></i>Mushroom</p>
+				</div>
+			</div>
+			<div class="col-sm-3">
+				<div class="topping">
+					<p><i></i>Meatball</p>
+				</div>
+			</div>
+			<div class="col-sm-3">
+				<div class="topping">
+					<p><i></i>Broccoli</p>
+				</div>
+			</div>
+		</div>
+		<div class="row" id="address">
+			<div class="form-group">
+				<div class="col-sm-4"> 
+					<label for="usr" >Name:</label>
+				</div>
+				<div class="col-sm-7"> 
+					<input type="text" class="form-control" id="usrName">
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-4"> 
+					<label for="usr" >Email:</label>
+				</div>
+				<div class="col-sm-7"> 
+					<input type="text" class="form-control" id="usrEmail">
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-4"> 
+					<label for="usr" >Contact No</label>
+				</div>
+				<div class="col-sm-7"> 
+					<input type="text" class="form-control" id="usrContactNo">
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-4"> 
+					<label for="usr" >Address Line:</label>
+				</div>
+				<div class="col-sm-7"> 
+					<input type="text" class="form-control" id="addrLine">
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-4"> 
+					<label for="usr" >City:</label>
+				</div>
+				<div class="col-sm-7"> 
+					<input type="text" class="form-control" id="city">
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-4"> 
+					<label for="usr" >State:</label>
+				</div>
+				<div class="col-sm-7"> 
+					<input type="text" class="form-control" id="state">
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-4"> 
+					<label for="usr" >Postal Code:</label>
+				</div>
+				<div class="col-sm-7"> 
+					<input type="text" class="form-control" id="pincode">
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-4"> 
+					<label for="usr" >Country:</label>
+				</div>
+				<div class="col-sm-7"> 
+					<input type="text" class="form-control" id="pincode">
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

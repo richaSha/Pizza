@@ -1,0 +1,72 @@
+.jumbotron {
+	background-image: url(../img/banner-pizza.jpg);
+    background-size: cover;
+    min-height: 25rem;
+}
+.img-wrapper {
+	border: 0.1rem solid #199ec2;
+    padding: 0.3rem;
+    box-shadow: #70a8af 2px 2px 4px;
+}
+.img-thumbnail {
+	border: 0.1rem solid #9ad4ec !important;
+	width: 100%;
+}
+.topping {
+	padding: 2rem;
+    font-size: 2.5rem;
+    font-family: fantasy;
+    font-weight: bold;
+    color: #6f97a5;
+}
+.topping p{
+	position: relative;
+    margin: 0;
+    padding-left: 3rem;
+}
+.topping i{
+	border: 1px solid #97bcd2;
+    position: absolute;
+    left: 0;
+    height: 15px;
+    width: 15px;
+    top: 15%;
+}
+.form-group label{
+	font-size: 2.3rem;
+    font-family: fantasy;
+    color: #6f97a5;
+}
+.form-group input{
+	font-size: 2rem;
+    font-family: fantasy;
+    color: #517e8e;
+    height: 4rem;
+    margin-bottom: 1rem;
+}
+#address {
+	padding: 0 10%;
+}
+.home {
+	position: relative;
+    height: 100%;
+    background: #f3f3f3;
+    margin: 2rem;
+    border: 0.2rem solid #189cc0;
+    box-shadow: 3px 4px 10px #6b7d82;
+    padding: 8rem;
+}
+.home p {
+    font-size: 3rem;
+    font-family: fantasy;
+    color: #317ea2;
+    text-align: center;
+}
+.home button {
+	background: #1ea1c0;
+    color: #efefef;
+    padding: 1% 4%;
+    border-radius: 0.5rem;
+    border: 1px solid #0f5669;
+    font-size: 1.8rem;
+}
