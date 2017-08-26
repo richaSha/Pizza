@@ -47,6 +47,9 @@
 #address {
 	padding: 0 10%;
 }
+#home .col-sm-12 {
+    height: 100%;
+}
 .home {
 	position: relative;
     height: 100%;
@@ -54,13 +57,15 @@
     margin: 2rem;
     border: 0.2rem solid #189cc0;
     box-shadow: 3px 4px 10px #6b7d82;
-    padding: 8rem;
+    height: 50%;
+    top: 20%;
 }
 .home p {
     font-size: 3rem;
     font-family: fantasy;
     color: #317ea2;
     text-align: center;
+    padding: 5rem;
 }
 .home button {
 	background: #1ea1c0;
@@ -69,4 +74,17 @@
     border-radius: 0.5rem;
     border: 1px solid #0f5669;
     font-size: 1.8rem;
+}
+.hide {
+    display: none;
+}
+.active:hover, .active {
+    color: #656161;
+    text-decoration: none;
+}
+.selected {
+    border:0.1rem solid #4eff85;
+}
+.checked {
+    background: #199ec2;
 }
