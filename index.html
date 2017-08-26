@@ -10,28 +10,31 @@
 	<script type="text/javascript" src="js/uiScripts.js"></script>
 </head>
 <body>
-	<div class="jumbotron">
-	</div>
-	<div class="container-fluid">
-		<ol class="breadcrumb">
-			<li><a href="#home" class="homeLink active">Home</a></li>
-			<li class="hide"><a href="#pizza-type" class="pizzaTypeLink">Pizza Type</a></li>
-	 		<li class="hide"><a href="#bread-type" class="breadTypeLink">Bread Type</a></li>
-			<li class="hide"><a href="#topping" class="toppingLink">Toppings</a></li>
-			<li class="hide"><a href="#address" class="addressLink">Address</a></li>
-			<li class="hide"><a href="#order" class="orderLink">Place Order</a></li> 
-		</ol>
+	<div class="bannerWrapper">
+		<div class="jumbotron">
+		</div>
+		<div class="container-fluid">
+			<ol class="breadcrumb">
+				<li type="home" class="homeLink active">Home</li>
+				<li type="pizza-type" class="hide pizzaTypeLink">Pizza Type</li>
+		 		<li type="bread-type" class="hide breadTypeLink">Bread Type</li>
+				<li type="topping" class="hide toppingLink">Toppings</li>
+				<li type="address" class="hide addressLink">Address</li>
+				<li type="order" class="hide orderLink">Place Order</li> 
+			</ol>
+		</div>
 	</div>
 	<div class="container">
 		<div class="row" id="home">
 			<div class="col-sm-12">
 				<div class="home">
 					<p>Your favorite pizza is just 5 steps away</p>
-					<button class="goToNextStep" name="home">Lets Order!</button>
+					<a href="#pizza-type" class="buttonLink"><button class="goToNextStep" name="home">Lets Order!</button></a>
 				</div>
 			</div>
 		</div>
 		<div class="row hide" id="pizza-type">
+			<h3>Step 1: Please Select Pizza Type</h3>
 			<div class="col-sm-3">
 				<div class="img-wrapper">
 					<img src="img/personalPizza.jpg" alt="personalPizza" class="img-thumbnail">
@@ -52,9 +55,12 @@
 					<img src="img/xtraLargePizza.jpg" alt="xtraLargePizza" class="img-thumbnail">
 				</div>
 			</div>
-			<button class="goToNextStep" name="pizzaType">2nd Step!</button>
+			<div class="col-sm-12">
+				<a href="#bread-type" class="buttonLink"><button class="goToNextStep" name="pizzaType">2nd Step!</button></a>
+			</div>
 		</div>
 		<div class="row hide" id="bread-type">
+			<h3>Step 2: Please Select Bread</h3>
 			<div class="col-sm-3">
 				<div class="img-wrapper">
 					<img src="img/classicBread.jpg" alt="classicBread"  class="img-thumbnail">
@@ -75,9 +81,10 @@
 					<img src="img/cheeseBread.jpg" alt="cheeseBread"  class="img-thumbnail">
 				</div>
 			</div>
-			<button class="goToNextStep" name="breadType">3rd Step!</button>
+			<a href="#topping" class="buttonLink"><button class="goToNextStep" name="breadType">3rd Step!</button></a>
 		</div>
-		<div class="row hide" id="Toppings">
+		<div class="row hide" id="topping">
+			<h3>Step 2: Please Select Toppings</h3>
 			<div class="col-sm-3">
 				<div class="topping">
 					<p><i></i>Cheese</p>
@@ -118,7 +125,7 @@
 					<p><i></i>Broccoli</p>
 				</div>
 			</div>
-			<button class="goToNextStep" name="topping">4th Step!</button>
+			<a href="#address" class="buttonLink"><button class="goToNextStep" name="topping">4th Step!</button></a>
 		</div>
 		<div class="row hide" id="address">
 			<div class="form-group">
@@ -185,25 +192,41 @@
 					<input type="text" class="form-control" id="country">
 				</div>
 			</div>
-			<button class="goToNextStep" name="address">Final Step!</button>
+			<a href="#order" class="buttonLink"><button class="goToNextStep" name="address">Final Step!</button></a>
 		</div>
 		<div class="row hide" id="order">
-			<div class="col-sm-5">
-				<div class="size">
+			<h3 class="finalBill">Step 5: Please Confirm Your Order</h3>
+			<div class="col-sm-3">
+				<div class="size img-wrapper">
 				</div>
 			</div>
-			<div class="col-sm-2">
-				<div class="add">
-					<img src="">
+			<div class="col-sm-3">
+				<div class="bread img-wrapper">
 				</div>
 			</div>
-			<div class="col-sm-5">
-				<div class="bread">
+			<div class ="col-sm-2 toppingOrder">
+				<ul></ul>
+			</div>
+			<div class ="col-sm-4 addressConfirm">
+				<span>Address</span>
+				<ul></ul>
+			</div>
+			<div class ="col-sm-12 orderConfirm">
+				<p><i></i>Please check to confirm the order</p>
+			</div>
+			<div class ="col-sm-12 amount hide">
+				<span>Your Total Bill is $<b></b></span>
+				<button>Place Order</button>
+			</div>
+		</div>
+		<div class="row hide" id="orderPlaced">
+			<div class="col-sm-12">
+				<div class="orderPlacedMsg">
+					<p>Your order has been placed on cash on delevery</p>
+					<span>Total amount:  </span>
+					<button class="refresh" name="refresh ">Ok</button>
 				</div>
 			</div>
-			<div class ="toppingOrder">
-			</div>
-			<button class="bill" name="order">Bill</button>
 		</div>
 	</div>
 </body>

@@ -12,19 +12,19 @@
 	border: 0.1rem solid #9ad4ec !important;
 	width: 100%;
 }
-.topping {
+.topping, .orderConfirm {
 	padding: 2rem;
     font-size: 2.5rem;
     font-family: fantasy;
     font-weight: bold;
     color: #6f97a5;
 }
-.topping p{
+.topping p, .orderConfirm p{
 	position: relative;
     margin: 0;
     padding-left: 3rem;
 }
-.topping i{
+.topping i, .orderConfirm i{
 	border: 1px solid #97bcd2;
     position: absolute;
     left: 0;
@@ -33,7 +33,7 @@
     top: 15%;
 }
 .form-group label{
-	font-size: 2.3rem;
+	font-size: 2rem;
     font-family: fantasy;
     color: #6f97a5;
 }
@@ -41,7 +41,6 @@
 	font-size: 2rem;
     font-family: fantasy;
     color: #517e8e;
-    height: 4rem;
     margin-bottom: 1rem;
 }
 #address {
@@ -50,7 +49,7 @@
 #home .col-sm-12 {
     height: 100%;
 }
-.home {
+.home , .orderPlacedMsg{
 	position: relative;
     height: 100%;
     background: #f3f3f3;
@@ -60,20 +59,44 @@
     height: 50%;
     top: 20%;
 }
-.home p {
+.orderPlacedMsg{
+    margin: 8rem;
+}
+.home p , .orderPlacedMsg p{
     font-size: 3rem;
     font-family: fantasy;
     color: #317ea2;
     text-align: center;
     padding: 5rem;
 }
-.home button {
+.orderPlacedMsg span{
+    text-align: center;
+    display: block;
+    padding-bottom: 2rem;
+    font-size: 2rem;
+    color: #318bb7;
+    font-family: fantasy;
+}
+.buttonLink {
+    color: #efefef !important;
+}
+.goToNextStep , .amount button, .refresh{
 	background: #1ea1c0;
-    color: #efefef;
+    color: #efefef !important;
     padding: 1% 4%;
     border-radius: 0.5rem;
     border: 1px solid #0f5669;
     font-size: 1.8rem;
+    margin-left: 40%;
+    margin-top: 2%;
+}
+.refresh{
+    margin-bottom: 1rem;
+    margin-left: 45%;
+}
+}
+.home button {
+    margin-top: 0% !important;
 }
 .hide {
     display: none;
@@ -83,8 +106,47 @@
     text-decoration: none;
 }
 .selected {
-    border:0.1rem solid #4eff85;
+    border:0.4rem solid #0ec547;
 }
 .checked {
     background: #199ec2;
+}
+.bannerWrapper{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 43%;
+    z-index: 999;
+    background: #ccc;
+}
+.container {
+    position: absolute;
+    top:40%;
+    width: 80%;
+    left: 10%;
+} 
+h3 {
+    padding: 1.5rem;
+    text-decoration: underline;
+    color: #3c4646 !important;
+    margin-bottom: 5% !important;
+}
+.toppingOrder li, .addressConfirm li{
+    font-size: 1.6rem;
+}
+.toppingOrder span, .addressConfirm span, .amount span{
+    padding: 10px;
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: underline;
+}
+.finalBill {
+    margin-bottom: 0% !important;
+}
+.amount {
+    padding-left: 40%;
+}
+.display {
+    margin-top: 35%;
 }

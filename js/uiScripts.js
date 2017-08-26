@@ -22,16 +22,23 @@ $(document).ready(function(){
 			})
 			PizzaOrder.address.push(delAddress);
 			PizzaOrder.address.forEach(function(add){
-				if((add.usrName != null || add.usrName!= "") && (add.usrEmail != null || add.usrEmail!= "") && (add.usrContactNo != null || add.usrContactNo!= "") && (add.addrLine != null || add.addrLine!= "")&& (add.city != null || add.city!= "")&& (add.state !=  null || add.state!= "")&& (add.pincode != null || add.pincode != "") &&  (add.country != null || add.country != "") ){
-					if(PizzaOrder.toppings){
-						$('.toppingOrder').append(`<p>With Below Toppings</p>`);
-						PizzaOrder.toppings.forEach(function(topping){
-							$('.toppingOrder').append(`<p>${topping}</p>`);
-						})
-					}
-					$('#order .bread').append(`<img src="img/${PizzaOrder.bread}.jpg">`);
-					$('#order .size').append(`<img src="img/${PizzaOrder.size}.jpg">`);
+				if(add.usrName != null && add.usrName!= "" && add.usrEmail != null && add.usrEmail!= "" && add.usrContactNo != null && add.usrContactNo!= ""&& add.addrLine != null && add.addrLine!= "" && add.city != null && add.city!= "" && add.state !=  null && add.state!= "" &&  add.pincode != null && add.pincode != "" &&  add.country != null && add.country != "" ){
 					
+					if(!($('#order').hasClass('orderAdded'))){
+						$('#order').addClass('orderAdded')
+						if(PizzaOrder.toppings != null && PizzaOrder.toppings){
+							$('.toppingOrder').prepend(`<span>Toppings</span>`);
+							PizzaOrder.toppings.forEach(function(topping){
+								$('.toppingOrder ul').append(`<li>${topping}</li>`);
+							})
+						}
+						$('#order .bread').append(`<img src="img/${PizzaOrder.bread}.jpg" class="img-thumbnail">`);
+						$('#order .size').append(`<img src="img/${PizzaOrder.size}.jpg" class="img-thumbnail">`);
+						//Adress Confirmation
+						$('#order .addressConfirm ul').append(`<li><b>Name: </b>${delAddress.usrName}</li><li><b>Email: </b> ${delAddress.usrEmail}</li><li><b>Contact No: </b>${delAddress.usrContactNo}</li>`);
+						$('#order .addressConfirm ul').append(`<li><b>Address: </li></b><p>${delAddress.addrLine}, ${delAddress.city}, ${delAddress.state}, ${delAddress.pincode}, ${delAddress.country}</p>`);
+					}
+					stopProcess = false;
 				}else {
 					
 					alert("Please fill the form");
@@ -46,8 +53,8 @@ $(document).ready(function(){
 		}else if(stopProcess == false){
 			$(this).parents('.row').next().removeClass('hide');
 			$(`.${this.name}Link`).removeClass('active');
-			$(`.${this.name}Link`).parents('li').next().removeClass('hide');
-			$(`.${this.name}Link`).parents('li').next().children().addClass('active');
+			$(`.${this.name}Link`).next().removeClass('hide');
+			$(`.${this.name}Link`).next().addClass('active');
 		}
 		
 
@@ -74,15 +81,28 @@ $(document).ready(function(){
 		topping = $(this).find('p').text()
 		if($(this).find('i').hasClass('checked')){
 			PizzaOrder.toppings.push(topping);
-		}else if(PizzaOrder.toppings.indexOf('topping')> -1){
-			PizzaOrder.toppings[order.toppings.indexOf('topping')] = null;
+		}else {
+			console.log(PizzaOrder.toppings.indexOf(topping));
+			PizzaOrder.toppings[PizzaOrder.toppings.indexOf(topping)] = null;
 		}
 
 	})
 
-	$('.bill').click(function(){
+	//order amount
+	$('.orderConfirm i').click(function(){
+		$(this).addClass('checked');
 		totalBill = PizzaOrder.price();
+		$('.amount b').text(totalBill);
+		$('.amount').removeClass('hide');
 	})
 
+	$('#order button').click(function(){
+		$('.row').addClass('hide');
+		$('#orderPlaced').removeClass('hide')
+		$("#orderPlaced span").append(totalBill);
+	})
+	$('.refresh').click(function(){
+		location.reload();
+	})
 
 })
